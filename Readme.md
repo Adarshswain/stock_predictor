@@ -25,7 +25,7 @@ Data Table: Shows detailed stock metrics for the selected index.
 
 Installation
 
-Clone the repository:
+Clone the repository:https://github.com/Adarshswain/stock_predictor
 
 git clone 
 
@@ -62,7 +62,5 @@ Volume chart for the selected index.
 
 Data table with metrics like open, high, low, close, points change, change %, volume, and turnover.
 
-
 Contributors
-
-Your Name : Adarsa Swain
+Adarsa Swain
