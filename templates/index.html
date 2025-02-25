@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Index Dashboard</h1>
+        <div class="row">
+            <div class="col-4">
+                <h3>Index Names</h3>
+                <ul id="company-list">
+                    {% for company in companies %}
+                        <li onclick="loadChartData('{{ company }}')">{{ company }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-8">
+                <h3>Volume Chart</h3>
+                <canvas id="stockChart" width="400" height="200"></canvas>
+                <h3>Index Data Table</h3>
+                <table id="dataTable" border="1">
+                    <thead>
+                        <tr>
+                            <th>Open</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Close</th>
+                            <th>Points Change</th>
+                            <th>Change %</th>
+                            <th>Volume</th>
+                            <th>Turnover (Cr)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
